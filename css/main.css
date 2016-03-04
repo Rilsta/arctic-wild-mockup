@@ -128,6 +128,38 @@ a {
       top: 34px;
       left: 0px; }
 
+.navbar-secondary {
+  height: 75px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  background: #343433; }
+  .navbar-secondary .nav-sec-main {
+    padding-left: 50px;
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    font-size: 14px;
+    color: #E6E6E0;
+    letter-spacing: 1px;
+    text-transform: uppercase; }
+    .navbar-secondary .nav-sec-main li {
+      flex: 1;
+      padding: 10px; }
+      .navbar-secondary .nav-sec-main li:nth-of-type(4) {
+        border-right: 1px solid #E6E6E0; }
+      .navbar-secondary .nav-sec-main li:nth-of-type(6) {
+        align-self: flex-end;
+        padding-right: 50px;
+        text-align: right;
+        flex: 10; }
+
+.nav-sec-drop {
+  color: #d4862b;
+  text-shadow: none; }
+  .nav-sec-drop ul li {
+    color: #E6E6E0; }
+
 .header {
   height: 100vh;
   background-image: url("../img/canoe.jpg");

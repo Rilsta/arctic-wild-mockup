@@ -1,3 +1,5 @@
+//Main Navbar
+
 .navbar{
   margin: 0 auto;
   height: 20vh;
@@ -68,5 +70,45 @@
       top: 34px;
       left: 0px;
     }
+  }
+}
+
+//Secondary Navbar
+
+.navbar-secondary{
+  height: 75px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  background: $dark-grey;
+  .nav-sec-main {
+    padding-left: 50px;
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    @include font(14px, $color: $white);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    li{
+      flex: 1;
+      padding: 10px;
+      &:nth-of-type(4){
+        border-right: 1px solid $white;
+      }
+      &:nth-of-type(6){
+        align-self: flex-end;
+        padding-right: 50px;
+        text-align: right;
+        flex: 10;
+      }
+    }
+  }
+}
+
+.nav-sec-drop{
+  color: $orange;
+  text-shadow: none;
+  ul li{
+    color: $white;
   }
 }
