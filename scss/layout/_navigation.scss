@@ -1,7 +1,7 @@
 .navbar{
   border: 1px solid honeydew;
   margin: 0 auto;
-  height: 30vh;
+  height: 20vh;
   width: 80%;
   display: flex;
   justify-content: center;
@@ -12,7 +12,7 @@
   border: 1px solid chartreuse;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: baseline;
 }
 
@@ -24,27 +24,45 @@
   }
 }
 
+.nav-basic{
+  display: flex;
+  align-items: center;
+  @include font(14px, $color: $white);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 10px;
+  &:hover{
+    color: $orange;
+  }
+}
+
 .nav-links{
   position: relative;
   border: 1px solid goldenrod;
   display: flex;
   align-items: center;
-  @include font(0.8em, $color: $white);
+  @include font(14px, $color: $white);
   letter-spacing: 1px;
   text-transform: uppercase;
+  padding: 10px;
   .drop-menu{
     display: none;
     width: 300px;
+    background-color: $dark-grey;
+    li{
+      padding: 10px;
+    }
   }
   i{
     font-size: 10px;
   }
   &:hover{
+    background-color: $dark-grey;
     .drop-menu{
       display: block;
       position: absolute;
-      top: 25px;
-      left: -25px;
+      top: 34px;
+      left: 0px;
     }
   }
 }

@@ -54,12 +54,13 @@ body {
   font-family: sans-serif; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #E6E6E0; }
 
 .navbar {
   border: 1px solid honeydew;
   margin: 0 auto;
-  height: 30vh;
+  height: 20vh;
   width: 80%;
   display: flex;
   justify-content: center;
@@ -69,7 +70,7 @@ a {
   border: 1px solid chartreuse;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: baseline; }
 
 .nav-logo {
@@ -79,25 +80,42 @@ a {
   .nav-logo:hover {
     color: #d4862b; }
 
+.nav-basic {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #E6E6E0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 10px; }
+  .nav-basic:hover {
+    color: #d4862b; }
+
 .nav-links {
   position: relative;
   border: 1px solid goldenrod;
   display: flex;
   align-items: center;
-  font-size: 0.8em;
+  font-size: 14px;
   color: #E6E6E0;
   letter-spacing: 1px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  padding: 10px; }
   .nav-links .drop-menu {
     display: none;
-    width: 300px; }
+    width: 300px;
+    background-color: #343433; }
+    .nav-links .drop-menu li {
+      padding: 10px; }
   .nav-links i {
     font-size: 10px; }
-  .nav-links:hover .drop-menu {
-    display: block;
-    position: absolute;
-    top: 25px;
-    left: -25px; }
+  .nav-links:hover {
+    background-color: #343433; }
+    .nav-links:hover .drop-menu {
+      display: block;
+      position: absolute;
+      top: 34px;
+      left: 0px; }
 
 .header {
   height: 100vh;
