@@ -84,6 +84,7 @@ a {
   text-shadow: 1px 1px #484848;
   flex: 1;
   font-size: 2em;
+  font-family: serif;
   color: #E6E6E0; }
   .nav-logo a:hover {
     color: #d4862b; }
@@ -171,7 +172,7 @@ a {
     display: none; } }
 .nav-bars {
   display: none;
-  font-size: 20px;
+  font-size: 30px;
   color: #E6E6E0;
   text-shadow: 1px 1px #343433; }
   .nav-bars:hover {
@@ -199,6 +200,7 @@ a {
     .header .header-text h1 {
       text-shadow: 1px 1px #343433;
       font-size: 10em;
+      font-family: serif;
       color: #E6E6E0; }
   .header hr {
     order: 1;
@@ -217,6 +219,8 @@ a {
 @media screen and (max-width: 500px) {
   .header {
     height: 75vh; }
+    .header .header-text hr {
+      height: 2px; }
     .header .header-text h1 {
       font-size: 4em;
       color: #E6E6E0; }

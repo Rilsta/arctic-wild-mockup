@@ -16,7 +16,7 @@
     }
     h1{
       text-shadow: 1px 1px $dark-grey;
-      @include font(10em, $color: $white);
+      @include font(10em, $color: $white, $family: serif);
     }
   }
   hr{
@@ -44,6 +44,9 @@
   .header{
     height: 75vh;
     .header-text{
+      hr{
+        height: 2px;
+      }
       h1{
         @include font(4em, $color: $white);
       }
