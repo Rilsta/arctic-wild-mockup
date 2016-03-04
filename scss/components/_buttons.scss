@@ -1,0 +1,28 @@
+.orange-button{
+  position: relative;
+  order: 1;
+  padding: 23px;
+  background: $orange;
+  color: $white;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 2em;
+}
+.triangle{
+  position: absolute;
+  bottom: -7px;
+  left:40%;
+  order: 1;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 8px solid $orange;
+}
+@media screen and (max-width: 500px){
+  .orange-button,
+  .triangle{
+    display: none;
+  }
+}

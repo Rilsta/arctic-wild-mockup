@@ -8,6 +8,24 @@
     justify-content: center;
     align-items: center;
     height: 60vh;
+    position: relative;
+    hr{
+      position: absolute;
+      left: 10%;
+      top: 78%;
+      width: 50px;
+      height: 5px;
+      border: none;
+      background-color: $orange;
+    }
+    h3{
+      position: absolute;
+      @include font(1.2em, $weight: bold);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      left: 10%;
+      top: 85%;
+    }
     .circle{
       display: flex;
       justify-content: center;
@@ -60,5 +78,37 @@
     background-image: url("../img/cliff.jpg");
     background-size: cover;
   }
+}
 
+@media screen and (max-width: 760px){
+    .gallery{
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: space-around;
+      .box{
+        height: 40vh;
+        // hr{
+        //   top:
+        // }
+
+        .circle{
+          height: 75px;
+          width: 75px;
+          img{
+           width: 45px;
+           height: 45px;
+          }
+        }
+      }
+      .box1,
+      .box2,
+      .box3,
+      .box4,
+      .box5,
+      .box6,{
+        width: 95vw;
+        margin: 10px 10px 0 10px;
+        border-radius: 3px;
+    }
+  }
 }

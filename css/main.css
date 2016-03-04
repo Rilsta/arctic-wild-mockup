@@ -51,7 +51,8 @@ table {
   box-sizing: border-box; }
 
 body {
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  background-color: #E6E6E0; }
 
 body::-webkit-scrollbar {
   display: none; }
@@ -107,7 +108,8 @@ a {
   letter-spacing: 1px;
   text-transform: uppercase;
   padding: 10px;
-  border-radius: 4px 4px 0 0; }
+  border-radius: 4px 4px 0 0;
+  z-index: 1; }
   .nav-drop .drop-menu {
     display: none;
     width: 275px;
@@ -128,6 +130,10 @@ a {
       top: 34px;
       left: 0px; }
 
+@media screen and (max-width: 1070px) {
+  .nav-basic,
+  .nav-drop {
+    display: none; } }
 .navbar-secondary {
   height: 75px;
   width: 100vw;
@@ -160,6 +166,20 @@ a {
   .nav-sec-drop ul li {
     color: #E6E6E0; }
 
+@media screen and (max-width: 1070px) {
+  .navbar-secondary {
+    display: none; } }
+.nav-bars {
+  display: none;
+  font-size: 20px;
+  color: #E6E6E0;
+  text-shadow: 1px 1px #343433; }
+  .nav-bars:hover {
+    color: #d4862b; }
+
+@media screen and (max-width: 1070px) {
+  .nav-bars {
+    display: block; } }
 .header {
   height: 100vh;
   background-image: url("../img/canoe.jpg");
@@ -173,9 +193,11 @@ a {
     order: 1;
     margin-bottom: 4em; }
     .header .header-text h3 {
+      text-shadow: 1px 1px #343433;
       font-size: 1.5em;
       color: #E6E6E0; }
     .header .header-text h1 {
+      text-shadow: 1px 1px #343433;
       font-size: 10em;
       color: #E6E6E0; }
   .header hr {
@@ -184,27 +206,23 @@ a {
     height: 5px;
     background: #E6E6E0;
     border: none; }
-  .header .orange-button {
-    position: relative;
-    order: 1;
-    padding: 23px;
-    background: #d4862b;
-    color: #E6E6E0;
-    font-size: 0.7em;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 2em; }
-  .header .triangle {
-    position: absolute;
-    bottom: -7px;
-    left: 40%;
-    order: 1;
-    width: 0;
-    height: 0;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-top: 8px solid #d4862b; }
 
+@media screen and (max-width: 760px) {
+  .header .header-text h1 {
+    font-size: 6em;
+    color: #E6E6E0; }
+  .header .header-text h3 {
+    font-size: 1em;
+    color: #E6E6E0; } }
+@media screen and (max-width: 500px) {
+  .header {
+    height: 75vh; }
+    .header .header-text h1 {
+      font-size: 4em;
+      color: #E6E6E0; }
+    .header .header-text h3 {
+      font-size: 1em;
+      color: #E6E6E0; } }
 .gallery {
   display: flex;
   flex-flow: row wrap;
@@ -213,7 +231,24 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60vh; }
+    height: 60vh;
+    position: relative; }
+    .gallery .box hr {
+      position: absolute;
+      left: 10%;
+      top: 78%;
+      width: 50px;
+      height: 5px;
+      border: none;
+      background-color: #d4862b; }
+    .gallery .box h3 {
+      position: absolute;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      left: 10%;
+      top: 85%; }
     .gallery .box .circle {
       display: flex;
       justify-content: center;
@@ -253,5 +288,54 @@ a {
     width: 50vw;
     background-image: url("../img/cliff.jpg");
     background-size: cover; }
+
+@media screen and (max-width: 760px) {
+  .gallery {
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-around; }
+    .gallery .box {
+      height: 40vh; }
+      .gallery .box .circle {
+        height: 75px;
+        width: 75px; }
+        .gallery .box .circle img {
+          width: 45px;
+          height: 45px; }
+    .gallery .box1,
+    .gallery .box2,
+    .gallery .box3,
+    .gallery .box4,
+    .gallery .box5,
+    .gallery .box6 {
+      width: 95vw;
+      margin: 10px 10px 0 10px;
+      border-radius: 3px; } }
+.orange-button {
+  position: relative;
+  order: 1;
+  padding: 23px;
+  background: #d4862b;
+  color: #E6E6E0;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 2em; }
+
+.triangle {
+  position: absolute;
+  bottom: -7px;
+  left: 40%;
+  order: 1;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 8px solid #d4862b; }
+
+@media screen and (max-width: 500px) {
+  .orange-button,
+  .triangle {
+    display: none; } }
 
 /*# sourceMappingURL=main.css.map */

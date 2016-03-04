@@ -11,10 +11,12 @@
     order:1;
     margin-bottom: 4em;
     h3{
+      text-shadow: 1px 1px $dark-grey;
       @include font(1.5em, $color: $white);
     }
     h1{
-      @include font(10em, $color: $white);;
+      text-shadow: 1px 1px $dark-grey;
+      @include font(10em, $color: $white);
     }
   }
   hr{
@@ -24,26 +26,30 @@
     background: $white;
     border: none;
   }
-  .orange-button{
-    position: relative;
-    order: 1;
-    padding: 23px;
-    background: $orange;
-    color: $white;
-    font-size: 0.7em;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 2em;
+}
+
+@media screen and (max-width: 760px){
+  .header{
+    .header-text{
+      h1{
+        @include font(6em, $color: $white);
+      }
+      h3{
+        @include font(1em, $color: $white);
+      }
+    }
   }
-  .triangle{
-    position: absolute;
-    bottom: -7px;
-    left:40%;
-    order: 1;
-    width: 0;
-  	height: 0;
-  	border-left: 15px solid transparent;
-  	border-right: 15px solid transparent;
-  	border-top: 8px solid $orange;
+}
+@media screen and (max-width: 500px){
+  .header{
+    height: 75vh;
+    .header-text{
+      h1{
+        @include font(4em, $color: $white);
+      }
+      h3{
+        @include font(1em, $color: $white);
+      }
+    }
   }
 }
