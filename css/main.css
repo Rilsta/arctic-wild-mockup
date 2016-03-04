@@ -53,12 +53,19 @@ table {
 body {
   font-family: sans-serif; }
 
+body::-webkit-scrollbar {
+  display: none; }
+
 a {
   text-decoration: none;
   color: #E6E6E0; }
 
+.container {
+  display: flex;
+  width: 100vw;
+  flex-direction: column; }
+
 .navbar {
-  border: 1px solid honeydew;
   margin: 0 auto;
   height: 20vh;
   width: 80%;
@@ -67,21 +74,21 @@ a {
   align-items: center; }
 
 .main-nav {
-  border: 1px solid chartreuse;
   width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: baseline; }
 
 .nav-logo {
-  flex: 2;
-  border: 1px solid honeydew;
-  font-size: 1.5em;
+  text-shadow: 1px 1px #484848;
+  flex: 1;
+  font-size: 2em;
   color: #E6E6E0; }
-  .nav-logo:hover {
+  .nav-logo a:hover {
     color: #d4862b; }
 
 .nav-basic {
+  text-shadow: 1px 1px #484848;
   display: flex;
   align-items: center;
   font-size: 14px;
@@ -93,21 +100,24 @@ a {
     color: #d4862b; }
 
 .nav-drop {
+  text-shadow: 1px 1px #484848;
   position: relative;
-  border: 1px solid goldenrod;
-  display: flex;
-  align-items: center;
   font-size: 14px;
   color: #E6E6E0;
   letter-spacing: 1px;
   text-transform: uppercase;
-  padding: 10px; }
+  padding: 10px;
+  border-radius: 4px 4px 0 0; }
   .nav-drop .drop-menu {
     display: none;
-    width: 300px;
-    background-color: #343433; }
+    width: 275px;
+    background-color: #343433;
+    border-radius: 0 4px 4px 4px; }
     .nav-drop .drop-menu li {
-      padding: 10px; }
+      padding: 10px;
+      border-bottom: 1px solid #E6E6E0; }
+      .nav-drop .drop-menu li:last-of-type {
+        border-bottom: none; }
   .nav-drop i {
     font-size: 10px; }
   .nav-drop:hover {
@@ -120,16 +130,16 @@ a {
 
 .header {
   height: 100vh;
-  background-image: url("../img/girls.jpg");
+  background-image: url("../img/canoe.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   flex-flow: column wrap;
-  align-items: center;
-  justify-content: space-around; }
+  align-items: center; }
   .header .header-text {
     text-align: center;
-    order: 1; }
+    order: 1;
+    margin-bottom: 4em; }
     .header .header-text h3 {
       font-size: 1.5em;
       color: #E6E6E0; }
@@ -150,7 +160,8 @@ a {
     color: #E6E6E0;
     font-size: 0.7em;
     text-transform: uppercase;
-    letter-spacing: 1px; }
+    letter-spacing: 1px;
+    margin-top: 2em; }
   .header .triangle {
     position: absolute;
     bottom: -7px;
@@ -161,5 +172,54 @@ a {
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
     border-top: 8px solid #d4862b; }
+
+.gallery {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100vw; }
+  .gallery .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh; }
+    .gallery .box .circle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(72, 72, 72, 0.8);
+      border-radius: 50%;
+      height: 100px;
+      width: 100px;
+      transition: transform 300ms; }
+      .gallery .box .circle img {
+        width: 50px;
+        height: 50px; }
+    .gallery .box:hover .circle {
+      transform: scale(1.2); }
+  .gallery .box1 {
+    width: 50vw;
+    background-image: url("../img/sheep.jpg");
+    background-size: cover; }
+  .gallery .box2 {
+    width: 25vw;
+    background-image: url("../img/legs.jpg");
+    background-size: cover; }
+  .gallery .box3 {
+    width: 25vw;
+    background-image: url("../img/girls.jpg");
+    background-size: cover; }
+  .gallery .box4 {
+    width: 25vw;
+    background-image: url("../img/path.jpg");
+    background-size: cover; }
+  .gallery .box5 {
+    width: 25vw;
+    background-image: url("../img/pug.jpg");
+    background-size: cover;
+    background-position: center; }
+  .gallery .box6 {
+    width: 50vw;
+    background-image: url("../img/cliff.jpg");
+    background-size: cover; }
 
 /*# sourceMappingURL=main.css.map */

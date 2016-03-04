@@ -1,15 +1,15 @@
 .header{
   height: 100vh;
-  background-image: url("../img/girls.jpg");
+  background-image: url("../img/canoe.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  justify-content: space-around;
   .header-text{
     text-align: center;
     order:1;
+    margin-bottom: 4em;
     h3{
       @include font(1.5em, $color: $white);
     }
@@ -33,6 +33,7 @@
     font-size: 0.7em;
     text-transform: uppercase;
     letter-spacing: 1px;
+    margin-top: 2em;
   }
   .triangle{
     position: absolute;

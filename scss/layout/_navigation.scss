@@ -1,5 +1,4 @@
 .navbar{
-  border: 1px solid honeydew;
   margin: 0 auto;
   height: 20vh;
   width: 80%;
@@ -9,7 +8,6 @@
 }
 
 .main-nav{
-  border: 1px solid chartreuse;
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -17,15 +15,16 @@
 }
 
 .nav-logo{
-  flex: 2;
-  border: 1px solid honeydew;
-  @include font(1.5em, $color: $white);
-  &:hover{
+  text-shadow: 1px 1px $grey;
+  flex: 1;
+  @include font(2em, $color: $white);
+  a:hover{
     color: $link-hover-prim;
   }
 }
 
 .nav-basic{
+  text-shadow: 1px 1px $grey;
   display: flex;
   align-items: center;
   @include font(14px, $color: $white);
@@ -37,21 +36,25 @@
   }
 }
 
- .nav-drop{
+.nav-drop{
+  text-shadow: 1px 1px $grey;
   position: relative;
-  border: 1px solid goldenrod;
-  display: flex;
-  align-items: center;
   @include font(14px, $color: $white);
   letter-spacing: 1px;
   text-transform: uppercase;
   padding: 10px;
+  border-radius: 4px 4px 0 0;
   .drop-menu{
     display: none;
-    width: 300px;
+    width: 275px;
     background-color: $dark-grey;
+    border-radius: 0 4px 4px 4px;
     li{
       padding: 10px;
+      border-bottom: 1px solid $white;
+      &:last-of-type{
+        border-bottom: none;
+      }
     }
   }
   i{
