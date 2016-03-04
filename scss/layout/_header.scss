@@ -1,6 +1,48 @@
 .header{
   height: 100vh;
-  background-image: url("../img/pug.jpg");
+  background-image: url("../img/girls.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-around;
+  .header-text{
+    text-align: center;
+    order:1;
+    h3{
+      @include font(1.5em, $color: $white);
+    }
+    h1{
+      @include font(10em, $color: $white);;
+    }
+  }
+  hr{
+    order:1;
+    width: 200px;
+    height: 5px;
+    background: $white;
+    border: none;
+  }
+  .orange-button{
+    position: relative;
+    order: 1;
+    padding: 23px;
+    background: $orange;
+    color: $white;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .triangle{
+    position: absolute;
+    bottom: -7px;
+    left:40%;
+    order: 1;
+    width: 0;
+  	height: 0;
+  	border-left: 15px solid transparent;
+  	border-right: 15px solid transparent;
+  	border-top: 8px solid $orange;
+  }
 }

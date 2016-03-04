@@ -17,6 +17,7 @@
 }
 
 .nav-logo{
+  flex: 2;
   border: 1px solid honeydew;
   @include font(1.5em, $color: $white);
   &:hover{
@@ -36,7 +37,7 @@
   }
 }
 
-.nav-links{
+ .nav-drop{
   position: relative;
   border: 1px solid goldenrod;
   display: flex;

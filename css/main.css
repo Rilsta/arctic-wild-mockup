@@ -74,6 +74,7 @@ a {
   align-items: baseline; }
 
 .nav-logo {
+  flex: 2;
   border: 1px solid honeydew;
   font-size: 1.5em;
   color: #E6E6E0; }
@@ -91,7 +92,7 @@ a {
   .nav-basic:hover {
     color: #d4862b; }
 
-.nav-links {
+.nav-drop {
   position: relative;
   border: 1px solid goldenrod;
   display: flex;
@@ -101,17 +102,17 @@ a {
   letter-spacing: 1px;
   text-transform: uppercase;
   padding: 10px; }
-  .nav-links .drop-menu {
+  .nav-drop .drop-menu {
     display: none;
     width: 300px;
     background-color: #343433; }
-    .nav-links .drop-menu li {
+    .nav-drop .drop-menu li {
       padding: 10px; }
-  .nav-links i {
+  .nav-drop i {
     font-size: 10px; }
-  .nav-links:hover {
+  .nav-drop:hover {
     background-color: #343433; }
-    .nav-links:hover .drop-menu {
+    .nav-drop:hover .drop-menu {
       display: block;
       position: absolute;
       top: 34px;
@@ -119,8 +120,46 @@ a {
 
 .header {
   height: 100vh;
-  background-image: url("../img/pug.jpg");
+  background-image: url("../img/girls.jpg");
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-around; }
+  .header .header-text {
+    text-align: center;
+    order: 1; }
+    .header .header-text h3 {
+      font-size: 1.5em;
+      color: #E6E6E0; }
+    .header .header-text h1 {
+      font-size: 10em;
+      color: #E6E6E0; }
+  .header hr {
+    order: 1;
+    width: 200px;
+    height: 5px;
+    background: #E6E6E0;
+    border: none; }
+  .header .orange-button {
+    position: relative;
+    order: 1;
+    padding: 23px;
+    background: #d4862b;
+    color: #E6E6E0;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+  .header .triangle {
+    position: absolute;
+    bottom: -7px;
+    left: 40%;
+    order: 1;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 8px solid #d4862b; }
 
 /*# sourceMappingURL=main.css.map */
