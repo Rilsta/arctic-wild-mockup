@@ -1,0 +1,7 @@
+.nav-logo{
+  @include font(2em, $color: $dark-grey);
+}
+
+.nav-links{
+  @include font(1.1em);
+}

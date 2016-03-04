@@ -50,7 +50,17 @@ table {
 *:after {
   box-sizing: border-box; }
 
+body {
+  font-family: sans-serif; }
+
 a {
   text-decoration: none; }
+
+.nav-logo {
+  font-size: 2em;
+  color: #343433; }
+
+.nav-links {
+  font-size: 1.1em; }
 
 /*# sourceMappingURL=main.css.map */
